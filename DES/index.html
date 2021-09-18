@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DES - Krystian Tworzewski 140192</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="DES encryption">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Krystian Tworzewski">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script type="text/javascript" src="des.js"></script>
+    <script type="text/javascript" src="const.js"></script>
+  
+  </head>
+  <body onload="generateKey()">
+    <div class="container">
+      <div class="jumbotron">
+        <br>
+        <h1 class="display-4">DES</h1>
+        <h5 class="display-8">Krystian Tworzewski I2 140192</h5>
+        <p class="lead"></p>
+        <hr class="my-4">
+        <p class="lead">
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Type your string to encrypt</label>
+            <textarea class="form-control" id="inputStream" rows="4"></textarea>
+          </div>
+          <hr class="my-4">
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Generated key</label>
+            <div class="row align-items-start">
+              <div class="col">
+                <input type="email" class="form-control" id="key" placeholder="abcd123" readonly>
+              </div>
+              <div class="col-2">
+                <a class="btn btn-primary" href="#" role="button" id="generateKey" onclick="generateKey();">Generate new key</a>
+              </div>
+            </div>
+          </div>
+          <hr class="my-4">
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Encrypted message</label>
+            <textarea class="form-control" id="outputStream" rows="7" readonly></textarea>
+          </div>
+          
+          <br>
+          <a class="btn btn-primary btn-lg" href="#" role="button" id="encryptBtn2" onclick="encrypt();">Encrypt</a>
+        </p>
+      </div>
+  </div>
+  </body>
+  </html>
